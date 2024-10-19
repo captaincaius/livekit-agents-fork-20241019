@@ -23,7 +23,7 @@ def _encoding_from_format(output_format: TTSEncoding) -> _Encoding:
         return "mp3"
     elif output_format.startswith("pcm"):
         return "pcm"
-    elif output_format.startswith("pcm"):
+    elif output_format.startswith("wav"):
         return "wav"
     raise ValueError(f"Unknown format: {output_format}")
 
