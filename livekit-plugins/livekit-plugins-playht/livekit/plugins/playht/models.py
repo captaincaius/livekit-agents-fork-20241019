@@ -12,4 +12,7 @@ TTSEncoding = Literal[
     "pcm_16000",
     "pcm_22050",
     "pcm_44100",
+    "wav_16000",
+    "wav_22050",
+    "wav_44100",
 ]
