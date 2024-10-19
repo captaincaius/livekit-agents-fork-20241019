@@ -10,7 +10,7 @@ from livekit.agents import tts, utils
 from .log import logger
 from .models import TTSEncoding, TTSEngines
 
-_Encoding = Literal["mp3", "pcm"]
+_Encoding = Literal["mp3", "pcm", "wav"]
 
 
 def _sample_rate_from_format(output_format: TTSEncoding) -> int:
@@ -23,7 +23,8 @@ def _encoding_from_format(output_format: TTSEncoding) -> _Encoding:
         return "mp3"
     elif output_format.startswith("pcm"):
         return "pcm"
-
+    elif output_format.startswith("pcm"):
+        return "wav"
     raise ValueError(f"Unknown format: {output_format}")
 
 
