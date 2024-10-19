@@ -17,10 +17,6 @@ class PlayHTPlugin(Plugin):
     def __init__(self) -> None:
         super().__init__(__name__, __version__, __package__)
 
-    def download_files(self) -> None:
-        self.download_files(self)
-
-
 Plugin.register_plugin(PlayHTPlugin())
 
 # Cleanup docs of unexported modules
